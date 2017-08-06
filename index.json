@@ -1,0 +1,77 @@
+{
+  "type": "array",
+  "items": {
+    "oneOf": [
+      {
+        "type": "object",
+        "properties": {
+          "blank": {
+            "$ref": "#/definitions/address"
+          },
+          "sameAs": {
+            "$ref": "#/definitions/address"
+          }
+        },
+        "required": [
+          "blank",
+          "sameAs"
+        ],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "blank": {
+            "$ref": "#/definitions/address"
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "explanation": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "examples": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "required": [
+          "blank",
+          "label",
+          "explanation"
+        ],
+        "additionalProperties": false
+      }
+    ]
+  },
+  "definitions": {
+    "address": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "oneOf": [
+          {
+            "type": "integer",
+            "min": 0
+          },
+          {
+            "type": "string",
+            "const": "form"
+          },
+          {
+            "type": "string",
+            "const": "content"
+          }
+        ]
+      }
+    }
+  }
+}

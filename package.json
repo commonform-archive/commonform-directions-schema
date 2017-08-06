@@ -1,0 +1,17 @@
+{
+  "name": "commonform-directions-schema",
+  "description": "JSON Schema for Common Form directions",
+  "version": "0.0.0",
+  "author": "Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com/)",
+  "devDependencies": {
+    "ajv": "^5.2.2"
+  },
+  "files": [
+    "index.json"
+  ],
+  "license": "Apache-2.0",
+  "repository": "kemitchell/commonform-directions-schema.js",
+  "scripts": {
+    "test": "node test.js"
+  }
+}
