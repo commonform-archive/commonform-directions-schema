@@ -28,7 +28,7 @@
             "type": "string",
             "minLength": 1
           },
-          "explanation": {
+          "notes": {
             "type": "array",
             "items": {
               "type": "string",
@@ -46,7 +46,7 @@
         "required": [
           "blank",
           "label",
-          "explanation"
+          "notes"
         ],
         "additionalProperties": false
       }
